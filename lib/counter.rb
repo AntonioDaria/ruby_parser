@@ -20,8 +20,15 @@ class Counter
   def count_visits
     sorted_pages = @visits.sort_by { |key, value| value.length }.reverse
     sorted_pages.each do |views, visits|
-       puts "#{views} #{visits.length} visits"
+      puts "#{views} #{visits.length} visits"
     end
+  end
+
+  def unique_views
+    sorted_pages = @visits.sort_by { |_view, unique| unique.uniq.length }.reverse
+    sorted_pages.each do |view, unique|
+      puts "#{view} #{unique.uniq.length} unique views"
+   end
   end
 
 end

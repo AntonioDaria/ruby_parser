@@ -26,5 +26,18 @@ describe Counter do
       expect(subject.count_visits.first[0]).to eq "/help_page/1"
     end
   end
+
+
+  describe "#unique_visits" do
+    it 'returns an Arry data structure' do
+      subject.store_pages("./mockedlog.log")
+      expect(subject.unique_views).to be_a Array
+    end
+
+    it "orders the Array by most visits" do
+      subject.store_pages("./mockedlog.log")
+      expect(subject.unique_views.last[0]).to eq "/contact"
+    end
+  end
+
 end
-        # "/index 1 visits\n/about/2 1 visits\n/home 2 visits\n/contact 1 visits\n/help_page/1 4 visits\n/about 1 visits\n").to_stdout
