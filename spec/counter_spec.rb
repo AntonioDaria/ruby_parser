@@ -29,7 +29,7 @@ describe Counter do
 
 
   describe "#unique_visits" do
-    it 'returns an Arry data structure' do
+    it 'returns an Array data structure' do
       subject.store_pages("./mockedlog.log")
       expect(subject.unique_views).to be_a Array
     end

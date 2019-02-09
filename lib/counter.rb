@@ -11,11 +11,11 @@ class Counter
     File.open(server_log).each do |log_rows|
       splitted_log_rows = log_rows.split(" ")
       if @visits.has_key?(splitted_log_rows[0])
-       @visits[splitted_log_rows[0]] << (splitted_log_rows[1])
-     else
-       @visits[splitted_log_rows[0]] = [splitted_log_rows[1]]
-     end
-   end
+        @visits[splitted_log_rows[0]] << (splitted_log_rows[1])
+      else
+        @visits[splitted_log_rows[0]] = [splitted_log_rows[1]]
+      end
+    end
   end
 
   def count_visits
