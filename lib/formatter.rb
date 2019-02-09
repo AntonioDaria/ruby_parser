@@ -1,5 +1,5 @@
 class Formatter
-  def printing_visits(views, visits)
+  def display_visits(views, visits)
     puts "#{views} #{visits} visits"
   end
   #
