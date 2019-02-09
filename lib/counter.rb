@@ -1,8 +1,9 @@
 class Counter
   attr_reader :visits
 
-  def initialize
+  def initialize(formatter = Formatter.new)
     @visits = {}
+    @formatter = formatter
   end
 
 
@@ -19,15 +20,15 @@ class Counter
 
   def count_visits
     sorted_pages = @visits.sort_by { |key, value| value.length }.reverse
-    sorted_pages.each do |views, visits|
-      puts "#{views} #{visits.length} visits"
+    sorted_pages.each do |view, visits|
+      @formatter.display_visits(view, visits.length)
     end
   end
 
   def unique_views
-    sorted_pages = @visits.sort_by { |_view, unique| unique.uniq.length }.reverse
+    sorted_pages = @visits.sort_by { |key, value| value.uniq.length }.reverse
     sorted_pages.each do |view, unique|
-      puts "#{view} #{unique.uniq.length} unique views"
+      @formatter.display_unique_views(view, unique.uniq.length)
    end
   end
 
