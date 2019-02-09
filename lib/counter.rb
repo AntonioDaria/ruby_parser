@@ -17,4 +17,11 @@ class Counter
    end
   end
 
+  def count_visits
+    sorted_pages = @web_pages.sort_by { |key, value| value.length }.reverse
+    sorted_pages.each do |views, visits|
+       puts "#{views} #{visits.length} visits"
+    end
+  end
+
 end
