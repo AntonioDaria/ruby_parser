@@ -1,7 +1,6 @@
 require 'counter'
 
 describe Counter do
-  subject(:counter) { described_class.new }
 
   describe "#store_pages" do
     it 'stores pages to a hash structure' do

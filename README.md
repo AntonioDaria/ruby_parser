@@ -40,7 +40,7 @@ I would like to see a ordered list of webpages with most unique page views
 
   `./bin/parser.rb web_server.log`
 
-### Screenshot of results and tests
+### Screenshot of results
 
 ![image](https://user-images.githubusercontent.com/24396579/52527883-18a41a80-2cc8-11e9-8a43-91bd22f8b61d.png)
 
@@ -65,8 +65,8 @@ I would like to see a ordered list of webpages with most unique page views
 ║            ║  - Return the number of unique views per page
 ╚════════════╝      
        |             ╔═════════════════╗
-       |             ║                 ║ - Displays the formatted results  
-       |------------>║ Formatter       ║
+       |             ║                 ║ - Module; no state  
+       |------------>║ Formatter       ║ - Displays the formatted results
                      ║                 ║
                      ╚═════════════════╝
 ```
