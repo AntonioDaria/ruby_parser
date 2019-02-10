@@ -32,7 +32,12 @@ I would like to see a ordered list of webpages with most unique page views
 
 - Run `bundle install`
 
+- Give execute permissions to the Ruby script:
+
+  `chmod +x parser.rb`
+
 - Run the app:
+
   `./bin/parser.rb web_server.log`
 
 ### Screenshot of results and tests
