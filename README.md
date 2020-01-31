@@ -54,19 +54,19 @@ I would like to see a ordered list of webpages with most unique page views
 ```
    U S E R
 ╔════════════╗              
-║  Terminal  ║  Interaction with log parser app               
+║  Terminal  ║  Interaction with log parser app.        
 ╚════════════╝
       |
       |
       |                                   
 ╔════════════╗     
-║            ║  - Opens the log file and stores the data into a Hash data type
-║   Counter  ║  - Returns the number of views per page
-║            ║  - Return the number of unique views per page
+║            ║  - Opens the log file and stores the data into a Hash data type.
+║   Counter  ║  - Returns the number of views per page.
+║            ║  - Return the number of unique views per page.
 ╚════════════╝      
        |             ╔═════════════════╗
        |             ║                 ║ - Module; no state  
-       |------------>║ Formatter       ║ - Displays the formatted results
+       |------------>║ Formatter       ║ - Displays the formatted results.
                      ║                 ║
                      ╚═════════════════╝
 ```
